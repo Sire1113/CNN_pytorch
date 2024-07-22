@@ -114,7 +114,7 @@ if __name__ == '__main__':
     train_iter, test_iter = d2l.load_data_fashion_mnist(batch_size=batch_size, resize=224)
     train_features, train_labels, train_iter = data_to_device(train_iter, device='cpu')
     test_features, test_labels, test_iter = data_to_device(test_iter, device='cpu')
-
+    #VGG-11
     conv_arch = ((1, 64), (1, 128), (2, 256), (2, 512), (2, 512))
     net = VGGBlock(conv_arch)
     net.apply(init_weights)
