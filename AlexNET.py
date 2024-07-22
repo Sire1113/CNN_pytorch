@@ -79,7 +79,7 @@ def accuracy(y_hat, y):
     cmp = y_hat.type(y.dtype) == y
     return float(cmp.type(y.dtype).sum())
 
-def evaluate_accuracy(net, data_iter):  # @save
+def evaluate_accuracy(net, data_iter):
     """计算在指定数据集上模型的精度"""
     n = 0
     accu = 0.
